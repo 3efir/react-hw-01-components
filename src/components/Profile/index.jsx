@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 import { v4 as uuidv4 } from 'uuid';
 import Description from './Description';
-import StatsItem from './StatsItem';
+import StatsItem from '../StatsItem';
 
 const Profile = ({ avatar, name, tag, location, stats }) => {
   return (

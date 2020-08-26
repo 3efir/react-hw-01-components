@@ -1,0 +1,29 @@
+li {
+    border-right: 1px solid #ecf0f5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+
+    &.item--colored {
+        border-right: none;
+
+        .label, .quantity {
+            color: #fff;
+        }
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+
+    .label {
+        color: #aab3bc;
+    }
+
+    .quantity {
+        margin-top: 11px;
+        font-weight: bold;
+    }
+}
