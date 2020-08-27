@@ -18,7 +18,11 @@ const FriendList = ({ friends }) => {
   );
 };
 
-FriendList.prototype = {
+FriendList.defaultProps = {
+  friends: []
+};
+
+FriendList.propTypes = {
   friends: PropTypes.arrayOf({
     avatar: PropTypes.string,
     name: PropTypes.string,

@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import PropTypes from 'prop-types';
 
 const FriendListItem = ({isOnline, avatar, name}) => {
   let statusClass = "friend-list__item-status";
@@ -15,6 +16,12 @@ const FriendListItem = ({isOnline, avatar, name}) => {
       <p className="friend-list__item-name">{name}</p>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  isOnline: PropTypes.bool,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default FriendListItem;
