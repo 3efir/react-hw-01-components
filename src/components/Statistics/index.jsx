@@ -6,7 +6,7 @@ import StatsItem from '../StatsItem';
 const Statistics = ({ title, stats }) => {
   return (
     <div className="statistics">
-      {title && (<h2 class="title">{title}</h2>)}
+      {title && (<h2 className="title">{title}</h2>)}
       <ul className="stat-list">
         {stats.map((item) => {
           return (
@@ -28,11 +28,13 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.string,
-  }),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
 
 export default Statistics;
